@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.767)
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
