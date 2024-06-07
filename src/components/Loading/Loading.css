@@ -1,0 +1,17 @@
+.loading {
+    font-size: 2.4rem;
+    color: white;
+    margin: 200px auto 0;
+    width: 100%;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
