@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MdOutlineShoppingCart } from "react-icons/md";
+import ApiContext from '../../context/apiContext';
 
 import "./CartButton.css"
 
-import { MdOutlineShoppingCart } from "react-icons/md";
-
 const CartButton = () => {
+  const { cartItems, isCartVisible, setCartVisible } = useContext(ApiContext);
+
   return (
-    <button className='cart__button'><MdOutlineShoppingCart />
-    <span className='cart__status'>1</span>
+    <button type='button' className='cart__button' 
+    onClick={() => setCartVisible(!isCartVisible)}>
+      <MdOutlineShoppingCart />
+    { cartItems.length > 0 && <span className='cart__status'>{cartItems.length}</span> }
     </button>
   )
 }
